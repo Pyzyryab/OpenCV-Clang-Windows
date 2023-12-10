@@ -1,8 +1,18 @@
-// #include "opencv2/core.hpp"
-// #include "opencv2/imgproc.hpp"
-// #include "opencv2/highgui.hpp"
-// #include "opencv2/videoio.hpp"
-#include "opencv2/opencv.hpp"
+/**
+ * @brief driver code for demonstrate the integration of OpenCV with the tools described
+ * in the documentation of the project
+ * 
+ * This example is take directly from the OpenCV examples 
+ * 
+ * @file main.cpp
+ * @date 2023-12-10
+ */
+
+#include "opencv2/core.hpp"
+#include "opencv2/imgproc.hpp"
+#include "opencv2/highgui.hpp"
+#include "opencv2/videoio.hpp"
+
 #include <iostream>
 
 using namespace cv;
@@ -16,6 +26,7 @@ int main()
     Mat image;
     VideoCapture capture;
     capture.open(0);
+    
     if(capture.isOpened())
     {
         cout << "Capture is opesdfsdned" << endl;
@@ -41,11 +52,16 @@ int main()
     return 0;
 }
 
-void drawText(Mat & image)
+void drawText(Mat& image)
 {
-    putText(image, "Hello OpenCV",
-            Point(20, 50),
-            FONT_HERSHEY_COMPLEX, 1, // font face and scale
-            Scalar(255, 255, 255), // white
-            1, LINE_AA); // line thickness and type
+    putText(
+        image,
+        "Hello OpenCV",
+        Point(20, 50),
+        FONT_HERSHEY_COMPLEX,
+        1, // font face and scale
+        Scalar(255, 255, 255), // white
+        1,
+        LINE_AA
+    ); // line thickness and type
 }
