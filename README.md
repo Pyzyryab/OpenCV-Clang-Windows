@@ -87,10 +87,10 @@ a minor modification, to directly installing it on the **Clang64** environment.
     pacman -S mingw-w64-clang-x86_64-llvm-libs
     ```
 
-### Now let's gonna power our **Clang** installation with some nice to have tools.
+### Now let's gonna power our **Clang** installation with some nice to have tools
 
-- **Clang Analyzer**: Clang is a compiler front end for the C, C++, and Objective-C programming languages. It is part of the LLVM (Low-Level Virtual Machine) project and aims to provide a fast, efficient, and versatile compiler infrastructure. Clang is known for its emphasis on providing helpful diagnostics and its modular architecture.
-This one isn't required for run this project.
+- **Clang Analyzer**: The Clang Static Analyzer is a source code analysis tool that finds bugs in C, C++, and Objective-C programs.
+This one isn't required for run this project, but is always nice to have static analysis tools.
 
     ```bash
     pacman -S mingw-w64-clang-x86_64-clang-analyzer

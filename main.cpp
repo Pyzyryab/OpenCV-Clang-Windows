@@ -29,7 +29,7 @@ int main()
     
     if(capture.isOpened())
     {
-        cout << "Capture is opesdfsdned" << endl;
+        cout << "Capture is opened" << endl;
         for(;;)
         {
             capture >> image;
@@ -62,6 +62,6 @@ void drawText(Mat& image)
         1, // font face and scale
         Scalar(255, 255, 255), // white
         1,
-        LINE_AA
-    ); // line thickness and type
+        LINE_AA // line thickness and type
+    );
 }
